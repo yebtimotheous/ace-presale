@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    title: "Spaghetti Token Presale",
+    title: "Ace Token Presale",
     navbar: {
       stake: "Stake",
       games: "Games",
@@ -14,19 +14,19 @@ const translations = {
       ru: "Russian",
     },
     connectWallet: "Connect Wallet",
-    buySpg: "BUY SPG",
+    buySpg: "BUY $ACE",
     yourBalance: "Your Balance:",
     tokenInfo: {
       token: "Token:",
-      tokenName: "Spaghetti Token",
+      tokenName: "Ace Token",
       price: "Price:",
       minPurchase: "Min Purchase:",
     },
     amountToPurchase: "Amount to Purchase",
     maxButton: "MAX",
     youWillReceive: "You will receive:",
-    buyButton: "Buy SPG",
-    spgBalance: "SPG Balance:",
+    buyButton: "Buy $ACE",
+    aceBalance: "$ACE Balance:",
     referralProgram: "Referral Program",
     referralInfo:
       "Refer others and earn 10% on their ETH. All influencers get unique links which attract as much as 30% ETH returns on all referrals.",
@@ -49,7 +49,7 @@ const translations = {
       ru: "ロシア語",
     },
     connectWallet: "ウォレットを接続",
-    buySpg: "SPGを購入",
+    buySpg: "$ACEを購入",
     yourBalance: "あなたの残高：",
     tokenInfo: {
       token: "トークン：",
@@ -60,8 +60,8 @@ const translations = {
     amountToPurchase: "購入金額",
     maxButton: "最大",
     youWillReceive: "受け取る金額：",
-    buyButton: "SPGを購入",
-    spgBalance: "SPG残高：",
+    buyButton: "$ACEを購入",
+    aceBalance: "$ACE残高：",
     referralProgram: "紹介プログラム",
     referralInfo:
       "他の人を紹介してETHの10%を獲得。インフルエンサーは全ての紹介で最大30%のETHリターンを獲得できるユニークなリンクを取得。",
@@ -70,7 +70,7 @@ const translations = {
     collectEthButton: "ETHを回収",
   },
   pt: {
-    title: "Pré-venda do Token Spaghetti",
+    title: "Pré-venda do Token Ace",
     navbar: {
       stake: "Stake",
       games: "Jogos",
@@ -84,19 +84,19 @@ const translations = {
       ru: "Russo",
     },
     connectWallet: "Conectar Carteira",
-    buySpg: "COMPRAR SPG",
+    buySpg: "COMPRAR $ACE",
     yourBalance: "Seu Saldo:",
     tokenInfo: {
       token: "Token:",
-      tokenName: "Token Spaghetti",
+      tokenName: "Token Ace",
       price: "Preço:",
       minPurchase: "Compra Mínima:",
     },
     amountToPurchase: "Quantidade para Comprar",
     maxButton: "MÁX",
     youWillReceive: "Você receberá:",
-    buyButton: "Comprar SPG",
-    spgBalance: "Saldo SPG:",
+    buyButton: "Comprar $ACE",
+    aceBalance: "Saldo $ACE:",
     referralProgram: "Programa de Indicação",
     referralInfo:
       "Indique outros e ganhe 10% em ETH. Todos os influenciadores recebem links únicos que atraem até 30% de retorno em ETH em todas as indicações.",
@@ -119,7 +119,7 @@ const translations = {
       ru: "רוסית",
     },
     connectWallet: "חבר ארנק",
-    buySpg: "קנה SPG",
+    buySpg: "קנה $ACE",
     yourBalance: "היתרה שלך:",
     tokenInfo: {
       token: "טוקן:",
@@ -130,8 +130,8 @@ const translations = {
     amountToPurchase: "כמות לרכישה",
     maxButton: "מקסימום",
     youWillReceive: "תקבל:",
-    buyButton: "קנה SPG",
-    spgBalance: "יתרת SPG:",
+    buyButton: "קנה $ACE",
+    aceBalance: "יתרת $ACE:",
     referralProgram: "תוכנית הפניה",
     referralInfo:
       "הפנה אחרים וקבל 10% מה-ETH שלהם. כל המשפיענים מקבלים קישורים ייחודיים המושכים עד 30% תשואה ב-ETH על כל ההפניות.",
@@ -140,7 +140,7 @@ const translations = {
     collectEthButton: "אסוף ETH",
   },
   ru: {
-    title: "Предпродажа токенов Spaghetti",
+    title: "Предпродажа токенов Ace",
     navbar: {
       stake: "Стейкинг",
       games: "Игры",
@@ -154,19 +154,19 @@ const translations = {
       ru: "Русский",
     },
     connectWallet: "Подключить кошелек",
-    buySpg: "КУПИТЬ SPG",
+    buySpg: "КУПИТЬ $ACE",
     yourBalance: "Ваш баланс:",
     tokenInfo: {
       token: "Токен:",
-      tokenName: "Токен Spaghetti",
+      tokenName: "Токен Ace",
       price: "Цена:",
       minPurchase: "Мин. покупка:",
     },
     amountToPurchase: "Сумма для покупки",
     maxButton: "МАКС",
     youWillReceive: "Вы получите:",
-    buyButton: "Купить SPG",
-    spgBalance: "Баланс SPG:",
+    buyButton: "Купить $ACE",
+    aceBalance: "Баланс $ACE:",
     referralProgram: "Реферальная программа",
     referralInfo:
       "Приглашайте других и зарабатывайте 10% их ETH. Все инфлюенсеры получают уникальные ссылки, которые приносят до 30% возврата ETH со всех рефералов.",
@@ -207,7 +207,7 @@ function updateLanguage(lang) {
       el.textContent = content.connectWallet;
     });
 
-  // Update "BUY SPG" text
+  // Update "BUY $ACE" text
   document.querySelector(".card-header h2").textContent = content.buySpg;
 
   // Update balance text
@@ -219,8 +219,8 @@ function updateLanguage(lang) {
   const tokenInfo = document.querySelector(".token-details");
   tokenInfo.innerHTML = `
       <strong>${content.tokenInfo.token}</strong> ${content.tokenInfo.tokenName}<br>
-      <strong>${content.tokenInfo.price}</strong> 250000 SPG = 0.005 ETH<br>
-      <strong>${content.tokenInfo.minPurchase}</strong> 250000 SPG
+      <strong>${content.tokenInfo.price}</strong> 250000 $ACE = 0.005 ETH<br>
+      <strong>${content.tokenInfo.minPurchase}</strong> 250000 $ACE
     `;
 
   // Update input placeholder
@@ -233,15 +233,15 @@ function updateLanguage(lang) {
   // Update "You will receive" text
   document.querySelector(
     ".amount-to-receive"
-  ).textContent = `${content.youWillReceive} 0 SPG`;
+  ).textContent = `${content.youWillReceive} 0 $ACE`;
 
   // Update Buy button
   document.querySelector(".buy-button").textContent = content.buyButton;
 
-  // Update SPG Balance text
+  // Update $ACE Balance text
   document.querySelector(
-    ".spg-balance"
-  ).textContent = `${content.spgBalance} 0.0000 SPG`;
+    ".ace-balance"
+  ).textContent = `${content.aceBalance} 0.0000 $ACE`;
 
   // Update Referral Program section
   document.querySelector(".earnings-title").textContent =
