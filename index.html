@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ACE TOKEN Presale : Home - Refer to Earn up to 30% in ETH</title>
+    <link rel="icon" href="https://spak-ui-main.vercel.app/favicon.png" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="PROJECT ACE Live, Latest Coinmarketcap Presale, $ACE on Coingecko,
+       $ACE on Base Chain. Stake $ACE to Earn Dual Reward $ACE - ETHER, ACE - ..
+          Hodl $ACE, Play To Earn | Next Meme Phase"
+    />
+    <meta
+      name="Project ACE"
+      content="Trending on Dextools.. Next 1000x Run With $ACE on Base.$PROJECT ACE  - Play 2 Earn Games."
+    />
+    <meta property="og:title" content="$ACE P2E Games on Base Chain" />
+    <meta
+      property="og:description"
+      content="$PROJECT ACE Presale Live -- Latest Coinmarketcap Price, $ACE on Coingecko, ACE on Base Chain. Stake ACE, P2E Games,  $ACE - ETHER, $ACE..
+          Hodl $ACE | Next Meme Phase"
+    />
+    <meta property="og:URL" content="https://acep2e.fun/img/banner.jpeg" />
+    <meta property="og:image" content="hhttps://acep2e.fun/img/banner.jpeg" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./layout/layout.css" />
+    <style>
+      .language-selector {
+        margin-right: 15px;
+      }
+
+      #languageSelect {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        font-size: 14px;
+      }
+    </style>
+
+    <!--## DEVTOOLS ##-->
+
+    <script src="./js/devtools.js"></script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-content">
+        <img src="img/logo.png" alt="Ace Token Logo" class="preloader-logo" />
+        <p class="preloader-text">Loading Ace Token...</p>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="nav-links">
+        <img src="img/logo.png" alt="Ace Token Logo" class="logo" />
+        <!-- Remove or properly place "Updated alt text" -->
+        <a href="#">Stake</a>
+        <a href="#">Games</a>
+        <a href="#">Trade</a>
+      </div>
+      <div class="menu-icon">☰</div>
+      <div class="language-selector">
+        <select id="languageSelect" onchange="updateLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+          <option value="pt">Português</option>
+          <option value="he">עברית</option>
+          <option value="ru">Русский</option>
+        </select>
+      </div>
+      <button class="connect-wallet" id="connectWalletBtn">
+        Connect Wallet
+      </button>
+    </nav>
+
+    <div class="container">
+      <h2>
+        <b>$ACE TOKEN <br />PRESALE</b>
+      </h2>
+      <header class="header">
+        <img src="img/logo.png" alt="Spaghett Token Logo" class="logo" />
+        <button class="wallet-button" id="headerConnectWalletBtn">
+          Connect Wallet
+        </button>
+      </header>
+
+      <div class="presale-card">
+        <div class="card-header">
+          <h2>BUY $ACE</h2>
+          <span class="balance">Your Balance: 0.0000 ETH</span>
+        </div>
+        <div class="card-content">
+          <div class="token-info">
+            <img src="img/logo.png" alt="Token Icon" class="token-icon" />
+            <p class="token-details">
+              <strong>Token:</strong> $Ace Token<br />
+              <strong>Price:</strong> 250000 ACE = 0.005 ETH<br />
+              <strong>Min Purchase:</strong> 250000 ACE
+            </p>
+          </div>
+          <div class="purchase-section">
+            <input
+              type="number"
+              placeholder="Amount to Purchase"
+              class="purchase-input"
+            />
+            <button class="max-button">MAX</button>
+          </div>
+
+          <hr />
+          <div class="amount-to-receive">You will receive: 0 ACE</div>
+          <hr />
+
+          <button class="buy-button">Buy ACE</button>
+        </div>
+        <br />
+        <span class="ace-balance">ACE Balance: 0.0000 ACE</span>
+      </div>
+
+      <div class="referral-section">
+        <input
+          type="text"
+          readonly
+          placeholder="Connect wallet to get referral link"
+          class="referral-input"
+        />
+        <button class="copy-button">Copy</button>
+      </div>
+
+      <!-- <div id="referralType"></div> -->
+
+      <div class="earnings-section">
+        <div class="earnings-header">
+          <h3 class="earnings-title">Referral Program</h3>
+          <button class="info-button">
+            ?
+            <span class="info-tooltip">
+              Refer others and earn 10% on their ETH. All influencers get unique
+              links which attract as much as 30% ETH returns on all referrals.
+            </span>
+          </button>
+        </div>
+        <div class="earnings-info">
+          <div class="info-row">
+            <span>Total Referrals:</span>
+            <span id="totalReferrals">0</span>
+          </div>
+          <div class="info-row">
+            <span>Total Earnings:</span>
+            <span id="totalEarnings">0 ETH</span>
+          </div>
+        </div>
+        <div class="collect-eth-row">
+          <button class="collect-eth-button">Collect ETH</button>
+        </div>
+      </div>
+
+      <a
+        href="https://t.me/acep2eChat"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-icon"
+        style="text-decoration: none"
+      >
+        <i class="fab fa-telegram"></i>
+      </a>
+    </div>
+
+    <div class="notification-container"></div>
+
+    <!-- <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script> -->
+    <script src="./js/ethers.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/languages.js"></script>
+
+    <script>
+      // Preloader functionality
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.querySelector(".preloader").style.display = "none";
+          document.querySelector(".content").style.display = "block";
+        }, 2000);
+      });
+
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const menuIcon = document.querySelector(".menu-icon");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuIcon.addEventListener("click", () => {
+          navLinks.classList.toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>
