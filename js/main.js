@@ -396,7 +396,7 @@ const connectWalletBtn = document.getElementById("connectWalletBtn");
 const headerConnectWalletBtn = document.getElementById(
   "headerConnectWalletBtn"
 );
-const spgBalanceElement = document.querySelector(".spg-balance");
+const spgBalanceElement = document.querySelector(".ace-balance");
 const balanceElement = document.querySelector(".balance");
 const referralInput = document.querySelector(".referral-input");
 const purchaseInput = document.querySelector(".purchase-input");
