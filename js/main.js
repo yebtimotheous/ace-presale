@@ -494,12 +494,12 @@ const updateSPGBalance = async () => {
     try {
       const balance = await spgTokenContract.balanceOf(userAddress);
       const spgBalance = ethers.utils.formatUnits(balance, 18);
-      spgBalanceElement.textContent = `SPG Balance: ${parseFloat(
+      spgBalanceElement.textContent = `ACE Balance: ${parseFloat(
         spgBalance
-      ).toFixed(2)} SPG`;
+      ).toFixed(2)} ACE`;
     } catch (error) {
-      console.error("Failed to fetch SPG balance:", error);
-      showNotification("Failed to update SPG balance", "error");
+      console.error("Failed to fetch ACE balance:", error);
+      showNotification("Failed to update ACE balance", "error");
     }
   }
 };
@@ -567,13 +567,13 @@ const updateAmountToReceive = async () => {
       amountToReceiveElement.textContent = `You will receive: ${ethers.utils.formatUnits(
         sltAmount,
         18
-      )} SPG`;
+      )} ACE`;
     } catch (error) {
       console.error("Failed to calculate token amount:", error);
       showNotification("Failed to calculate token amount", "error");
     }
   } else {
-    amountToReceiveElement.textContent = "You will receive: 0 SPG";
+    amountToReceiveElement.textContent = "You will receive: 0 ACE";
   }
 };
 
@@ -648,7 +648,7 @@ const buyTokens = async () => {
 
     await tx.wait();
 
-    showNotification("You have purchased SPG tokens successfully!", "success");
+    showNotification("You have purchased ACE tokens successfully!", "success");
     await updateBalance();
     await updateSPGBalance();
     await updateReferralEarnings();

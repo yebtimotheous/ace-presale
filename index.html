@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PRESALE - Home : $ACE  Refer to Earn up to 30% in ETH</title>
-    <link rel="icon" href="https://spak-ui-main.vercel.app/favicon.png" />
+    <title>PROJECT ACE Presale : Home - Refer to Earn up to 30% in ETH</title>
+    <link rel="icon" href="https://www.acep2e.fun/favicon.ico" />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -48,23 +48,74 @@
       }
     </style>
 
+    <style>
+      /* Existing styles */
+
+      /* Notification Banner Styles */
+      .notification-banner {
+        background-color: #feff05;
+        color: #000;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        position: relative;
+        z-index: 1000;
+      }
+
+      .notification-banner i {
+        margin-right: 10px;
+        font-size: 20px;
+      }
+
+      .notification-banner span {
+        display: flex;
+        align-items: center;
+      }
+
+      /* Optional: Make the banner responsive */
+      @media (max-width: 600px) {
+        .notification-banner {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .notification-banner i {
+          margin-bottom: 5px;
+        }
+      }
+    </style>
+
     <!--## DEVTOOLS ##-->
 
     <script src="./js/devtools.js"></script>
   </head>
   <body>
-    <!-- Preloader -->
     <div class="preloader">
       <div class="preloader-content">
-        <img src="img/logo.png" alt="Ace Token Logo" class="preloader-logo" />
-        <p class="preloader-text">Loading Ace Token...</p>
+        <img
+          src="img/logo-main.png"
+          alt="Spaghetti Token Logo"
+          class="preloader-logo"
+        />
+        <p class="preloader-text">Loading...</p>
       </div>
+    </div>
+
+    <!-- Notification Banner -->
+    <div class="notification-banner">
+      <i class="fas fa-info-circle"></i>
+      <span>
+        Copy and share your referral link for up to 10% ETH returns. Get your
+        Unique Influencer link for up to 30% ETH rewards.
+      </span>
     </div>
 
     <nav class="navbar">
       <div class="nav-links">
-        <img src="img/logo.png" alt="Ace Token Logo" class="logo" />
- <a href="https://stake.acep2e.fun/" target="_blank">Stake</a>
+        <img src="img/logo-main.png" alt="Spaghetti Token Logo" class="logo" />
+        <a href="https://stake.acep2e.fun/" target="_blank">Stake</a>
         <a href="https://www.acep2e.fun/#casino" target="_blank">Games</a>
         <a
           href="https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=0x4200000000000000000000000000000000000006"
@@ -86,30 +137,34 @@
         Connect Wallet
       </button>
     </nav>
-
+    <h1>
+      ACE TOKEN <br />
+      PRESALE
+    </h1>
     <div class="container">
-      <h2>
-        <b>$ACE TOKEN <br />PRESALE</b>
-      </h2>
       <header class="header">
-        <img src="img/logo.png" alt="Spaghett Token Logo" class="logo" />
-        <button class="wallet-button" id="headerConnectWalletBtn">
+        <img src="img/logo-main.png" alt="Spaghett Token Logo" class="logo" />
+        <br />
+        <button
+          class="wallet-button connect-wallet"
+          id="headerConnectWalletBtn"
+        >
           Connect Wallet
         </button>
       </header>
 
       <div class="presale-card">
         <div class="card-header">
-          <h2>BUY $ACE</h2>
+          <h2>BUY SPG</h2>
           <span class="balance">Your Balance: 0.0000 ETH</span>
         </div>
         <div class="card-content">
           <div class="token-info">
-            <img src="img/logo.png" alt="Token Icon" class="token-icon" />
+            <img src="img/logo-main.png" alt="Token Icon" class="token-icon" />
             <p class="token-details">
-              <strong>Token:</strong> $Ace Token<br />
-              <strong>Price:</strong> 250000 ACE = 0.005 ETH<br />
-              <strong>Min Purchase:</strong> 250000 ACE
+              <strong>Token:</strong> Spaghetti Token<br />
+              <strong>Price:</strong> 250000 SPG = 0.005 ETH<br />
+              <strong>Min Purchase:</strong> 250000 SPG
             </p>
           </div>
           <div class="purchase-section">
@@ -122,13 +177,13 @@
           </div>
 
           <hr />
-          <div class="amount-to-receive">You will receive: 0 ACE</div>
+          <div class="amount-to-receive">You will receive: 0 SPG</div>
           <hr />
 
           <button class="buy-button">Buy ACE</button>
         </div>
         <br />
-        <span class="ace-balance">ACE Balance: 0.0000 ACE</span>
+        <span class="ace-balance">ACE Balance: 0.0000 SPG</span>
       </div>
 
       <div class="referral-section">
@@ -140,8 +195,6 @@
         />
         <button class="copy-button">Copy</button>
       </div>
-
-      <!-- <div id="referralType"></div> -->
 
       <div class="earnings-section">
         <div class="earnings-header">
@@ -170,7 +223,7 @@
       </div>
 
       <a
-        href="https://t.me/acep2eChat"
+        href="https://t.me/spgtoken_chat"
         target="_blank"
         rel="noopener noreferrer"
         class="telegram-icon"
@@ -182,13 +235,11 @@
 
     <div class="notification-container"></div>
 
-    <!-- <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script> -->
     <script src="./js/ethers.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/languages.js"></script>
 
     <script>
-      // Preloader functionality
       window.addEventListener("load", function () {
         setTimeout(function () {
           document.querySelector(".preloader").style.display = "none";

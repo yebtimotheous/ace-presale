@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
-contract AceTokenPresale is Ownable, ReentrancyGuard {
+contract SpaghettiTokenPresale is Ownable, ReentrancyGuard {
     IERC20 public spaghettiToken;
     uint256 public constant TOKENS_PER_ETH = 50000000; // 50,000,000 SPG per ETH
     uint256 public constant MIN_PURCHASE = 250000 * 10 ** 18; // 250,000 SPG minimum purchase
