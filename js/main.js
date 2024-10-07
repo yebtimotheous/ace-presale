@@ -1,371 +1,384 @@
 // Constants
-const CONTRACT_ADDRESS = "0xbe0f71133aC592ed2C49366387D7b8B645F969d3";
+const CONTRACT_ADDRESS = "0x1A8D3B3536695bcBA9Cf92f28382f1544f9f6352";
 // 0xF9d95F0072388EBda1a039410C8bF521e9b0913b
 const CONTRACT_ABI = [
   {
-    inputs: [
-      { internalType: "address", name: "_tokenAddress", type: "address" },
+    "inputs": [
+      { "internalType": "address", "name": "_tokenAddress", "type": "address" },
       {
-        internalType: "uint256",
-        name: "_presaleDurationInDays",
-        type: "uint256",
-      },
+        "internalType": "uint256",
+        "name": "_presaleDurationInDays",
+        "type": "uint256"
+      }
     ],
-    stateMutability: "nonpayable",
-    type: "constructor",
+    "stateMutability": "nonpayable",
+    "type": "constructor"
   },
   {
-    anonymous: false,
-    inputs: [
+    "anonymous": false,
+    "inputs": [
       {
-        indexed: true,
-        internalType: "address",
-        name: "referrer",
-        type: "address",
+        "indexed": true,
+        "internalType": "address",
+        "name": "referrer",
+        "type": "address"
       },
       {
-        indexed: false,
-        internalType: "uint256",
-        name: "amount",
-        type: "uint256",
-      },
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
     ],
-    name: "EarningsCollected",
-    type: "event",
+    "name": "EarningsCollected",
+    "type": "event"
   },
   {
-    anonymous: false,
-    inputs: [
+    "anonymous": false,
+    "inputs": [
       {
-        indexed: true,
-        internalType: "address",
-        name: "influencerAddress",
-        type: "address",
+        "indexed": true,
+        "internalType": "address",
+        "name": "influencerAddress",
+        "type": "address"
       },
       {
-        indexed: false,
-        internalType: "string",
-        name: "uniqueName",
-        type: "string",
-      },
+        "indexed": false,
+        "internalType": "string",
+        "name": "uniqueName",
+        "type": "string"
+      }
     ],
-    name: "InfluencerAdded",
-    type: "event",
+    "name": "InfluencerAdded",
+    "type": "event"
   },
   {
-    anonymous: false,
-    inputs: [
+    "anonymous": false,
+    "inputs": [
       {
-        indexed: true,
-        internalType: "string",
-        name: "influencerName",
-        type: "string",
+        "indexed": true,
+        "internalType": "string",
+        "name": "influencerName",
+        "type": "string"
       },
       {
-        indexed: false,
-        internalType: "uint256",
-        name: "amount",
-        type: "uint256",
-      },
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
     ],
-    name: "InfluencerEarned",
-    type: "event",
+    "name": "InfluencerEarned",
+    "type": "event"
   },
   {
-    anonymous: false,
-    inputs: [
+    "anonymous": false,
+    "inputs": [
       {
-        indexed: true,
-        internalType: "address",
-        name: "previousOwner",
-        type: "address",
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
       },
       {
-        indexed: true,
-        internalType: "address",
-        name: "newOwner",
-        type: "address",
-      },
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
     ],
-    name: "OwnershipTransferred",
-    type: "event",
+    "name": "OwnershipTransferred",
+    "type": "event"
   },
   {
-    anonymous: false,
-    inputs: [
+    "anonymous": false,
+    "inputs": [
       {
-        indexed: false,
-        internalType: "uint256",
-        name: "tokensSold",
-        type: "uint256",
-      },
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "tokensSold",
+        "type": "uint256"
+      }
     ],
-    name: "PresaleEnded",
-    type: "event",
+    "name": "PresaleEnded",
+    "type": "event"
   },
   {
-    anonymous: false,
-    inputs: [
+    "anonymous": false,
+    "inputs": [
       {
-        indexed: true,
-        internalType: "address",
-        name: "referrer",
-        type: "address",
+        "indexed": true,
+        "internalType": "address",
+        "name": "referrer",
+        "type": "address"
       },
       {
-        indexed: false,
-        internalType: "uint256",
-        name: "amount",
-        type: "uint256",
-      },
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
     ],
-    name: "ReferralEarned",
-    type: "event",
+    "name": "ReferralEarned",
+    "type": "event"
   },
   {
-    anonymous: false,
-    inputs: [
+    "anonymous": false,
+    "inputs": [
       {
-        indexed: true,
-        internalType: "address",
-        name: "buyer",
-        type: "address",
+        "indexed": true,
+        "internalType": "address",
+        "name": "buyer",
+        "type": "address"
       },
       {
-        indexed: false,
-        internalType: "uint256",
-        name: "amount",
-        type: "uint256",
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
       },
       {
-        indexed: false,
-        internalType: "address",
-        name: "referrer",
-        type: "address",
+        "indexed": false,
+        "internalType": "address",
+        "name": "referrer",
+        "type": "address"
       },
       {
-        indexed: false,
-        internalType: "string",
-        name: "influencerName",
-        type: "string",
-      },
+        "indexed": false,
+        "internalType": "string",
+        "name": "influencerName",
+        "type": "string"
+      }
     ],
-    name: "TokensPurchased",
-    type: "event",
+    "name": "TokensPurchased",
+    "type": "event"
   },
   {
-    inputs: [],
-    name: "INFLUENCER_PERCENT",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [],
+    "name": "INFLUENCER_PERCENT",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "MIN_PURCHASE",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [],
+    "name": "MIN_PURCHASE",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "PRESALE_SUPPLY",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [],
+    "name": "PRESALE_SUPPLY",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "REFERRAL_PERCENT",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [],
+    "name": "REFERRAL_PERCENT",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "TOKENS_PER_ETH",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [],
+    "name": "TOKENS_PER_ETH",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [
+    "inputs": [
       {
-        internalType: "address",
-        name: "_influencerAddress",
-        type: "address",
+        "internalType": "address",
+        "name": "_influencerAddress",
+        "type": "address"
       },
-      { internalType: "string", name: "_uniqueName", type: "string" },
+      { "internalType": "string", "name": "_uniqueName", "type": "string" }
     ],
-    name: "addInfluencer",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
+    "name": "addInfluencer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   },
   {
-    inputs: [
-      { internalType: "address", name: "_referrer", type: "address" },
-      { internalType: "string", name: "_influencerName", type: "string" },
+    "inputs": [
+      { "internalType": "address", "name": "_referrer", "type": "address" },
+      { "internalType": "string", "name": "_influencerName", "type": "string" }
     ],
-    name: "buyTokens",
-    outputs: [],
-    stateMutability: "payable",
-    type: "function",
+    "name": "buyTokens",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
   },
   {
-    inputs: [{ internalType: "uint256", name: "_ethAmount", type: "uint256" }],
-    name: "calculateTokenAmount",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "pure",
-    type: "function",
+    "inputs": [
+      { "internalType": "uint256", "name": "_ethAmount", "type": "uint256" }
+    ],
+    "name": "calculateTokenAmount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "pure",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "claimReferralEarnings",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
+    "inputs": [],
+    "name": "claimReferralEarnings",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "endPresale",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
+    "inputs": [],
+    "name": "endPresale",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   },
   {
-    inputs: [{ internalType: "string", name: "_uniqueName", type: "string" }],
-    name: "getInfluencerAddress",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [
+      { "internalType": "string", "name": "_uniqueName", "type": "string" }
+    ],
+    "name": "getInfluencerAddress",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [
+    "inputs": [
       {
-        internalType: "address",
-        name: "_influencerAddress",
-        type: "address",
-      },
+        "internalType": "address",
+        "name": "_influencerAddress",
+        "type": "address"
+      }
     ],
-    name: "getInfluencerName",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
-    stateMutability: "view",
-    type: "function",
+    "name": "getInfluencerName",
+    "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [{ internalType: "address", name: "_referrer", type: "address" }],
-    name: "getTotalEarnings",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "_referrer", type: "address" }],
-    name: "getTotalReferrals",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "influencerAddressToName",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "string", name: "", type: "string" }],
-    name: "influencers",
-    outputs: [
-      { internalType: "address", name: "addr", type: "address" },
-      { internalType: "string", name: "uniqueName", type: "string" },
+    "inputs": [
+      { "internalType": "address", "name": "_referrer", "type": "address" }
     ],
-    stateMutability: "view",
-    type: "function",
+    "name": "getTotalEarnings",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "owner",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [
+      { "internalType": "address", "name": "_referrer", "type": "address" }
+    ],
+    "name": "getTotalReferrals",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "presaleEndTime",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "influencerAddressToName",
+    "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "presaleEnded",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "name": "influencers",
+    "outputs": [
+      { "internalType": "address", "name": "addr", "type": "address" },
+      { "internalType": "string", "name": "uniqueName", "type": "string" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "referralEarnings",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [],
+    "name": "owner",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "renounceOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
+    "inputs": [],
+    "name": "presaleEndTime",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "spaghettiToken",
-    outputs: [{ internalType: "contract IERC20", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [],
+    "name": "presaleEnded",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "tokensSold",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "referralEarnings",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "totalReferrals",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
   },
   {
-    inputs: [{ internalType: "address", name: "newOwner", type: "address" }],
-    name: "transferOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
+    "inputs": [],
+    "name": "spaghettiToken",
+    "outputs": [
+      { "internalType": "contract IERC20", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "withdrawETH",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
+    "inputs": [],
+    "name": "tokensSold",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
   {
-    inputs: [],
-    name: "withdrawUnsoldTokens",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "name": "totalReferrals",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
   },
-  { stateMutability: "payable", type: "receive" },
-];
+  {
+    "inputs": [
+      { "internalType": "address", "name": "newOwner", "type": "address" }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawETH",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "withdrawUnsoldTokens",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  { "stateMutability": "payable", "type": "receive" }
+]
+
 
 // Add these new constants
-const SPG_TOKEN_ADDRESS = "0xBD84B55187Ff2b82cD2810c7298FfA8B28CB6Bb4";
+const SPG_TOKEN_ADDRESS = "0x49fb10526247d4aB400c92E51E1b1F0ca753F730";
 const SPG_TOKEN_ABI = [
   // Including only the necessary functions from the SPG token contract ABI
   {
